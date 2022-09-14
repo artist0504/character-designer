@@ -55,12 +55,15 @@ function displayPhrases() {
         // > set the text of the li to the phrase
         li.textContent = phrase;
         // > append the <li> to the phrases list
-        phraseList.append('li');
+        phraseList.append(li);
     }
 }
 
+// Add some conditional logic!!!!
 addButton.addEventListener('click', () => {
     // > Get the phrase from the value of the phrase input
+   if (phraseInput.value !== ' ') { 
+    // alert('Input Required')
     const phrase = phraseInput.value;
     // > Use ".push" to add the phrase to the end of the character phrases array
     character.phrases.push(phrase);
